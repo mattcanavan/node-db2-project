@@ -1,4 +1,7 @@
 const express = require('express');
-const db = require('../../data/dbConfig');
-
 const router = express.Router();
+const HelperFuncs = require('./cars-model');
+
+
+
+module.exports = router;

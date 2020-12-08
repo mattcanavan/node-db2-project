@@ -177,3 +177,6 @@ dist
 .yarn/build-state.yml
 .yarn/install-state.gz
 .pnp.*
+
+# database
+car-dealer.db3
