@@ -42,3 +42,35 @@ Follow these steps for completing your project.
 
 - [ ] Submit a pull request to merge <firstName-lastName> Branch into master (student's  Repo). **Please don't merge your own pull request**
 
+## Extra Credit
+
+### Getting Started ..
+1. create required files:
+    - npx gitignore node // .gitignore 
+    - npm init -y // package.json, -y flag generates without asking any questions  
+2. install dependencies:
+    - npm i express knex helmet sqlite3
+3. install dev dependencies:
+    - npm i -D nodemon
+    - npx eslint --init // .eslint.json
+        - "to check syntax and find problems"
+        - "common.js"
+        - "none" to frameworks
+        - "no" Typscript
+        - "Node"
+        - "JSON"
+4. add scripts inside package.json:
+    - "start": "node index.js"
+    - "server": "nodemon index.js"
+    - "migrateup": "knex migrate:up",
+    - "migratedown": "knex migrate:down",
+    - "migratelatest": "knex migrate:latest",
+    - "migraterollback": "knex migrate:rollback"
+5. add index.js file. flush it out.
+6. add "api" folder
+    - create server.js file. flush it out.
+    - create folder for each router used
+7. add "data" folder
+    - create dbConfig.js file. flush it out.
+8. create knexfile.js using scaffold command (add at top-level project directory):
+    - npx knex init
