@@ -46,7 +46,7 @@ Follow these steps for completing your project.
 
 ### Getting Started ..
 1. create required files:
-    - npx gitignore node // .gitignore 
+    - npx gitignore node // .gitignore
     - npm init -y // package.json, -y flag generates without asking any questions  
 2. install dependencies:
     - npm i express knex helmet sqlite3
@@ -67,10 +67,17 @@ Follow these steps for completing your project.
     - "migratelatest": "knex migrate:latest",
     - "migraterollback": "knex migrate:rollback"
 5. add index.js file. flush it out.
-6. add "api" folder
+6. add "api" folder:
     - create server.js file. flush it out.
     - create folder for each router used
-7. add "data" folder
+        - create respective router and model files
+7. add "data" folder:
     - create dbConfig.js file. flush it out.
 8. create knexfile.js using scaffold command (add at top-level project directory):
     - npx knex init
+    - flush out with your config settings (migrations and seeds directories, location of db file (connection), etc)
+9. check that server can run. 
+10. create migration file and folder using scaffold command (creation location defined in knexfile.js):
+    - npx knex migrate:make <table_name> // (e.g. cars_table where db3 is named car-dealer)
+    - flush out.
+11. add .db3 file to gitignore.
