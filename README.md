@@ -42,3 +42,44 @@ Follow these steps for completing your project.
 
 - [ ] Submit a pull request to merge <firstName-lastName> Branch into master (student's  Repo). **Please don't merge your own pull request**
 
+## Extra Credit
+
+### Getting Started ..
+1. create required files:
+    - npx gitignore node // .gitignore
+    - npm init -y // package.json, -y flag generates without asking any questions  
+2. install dependencies:
+    - npm i express knex helmet sqlite3
+3. install dev dependencies:
+    - npm i -D nodemon
+    - npx eslint --init // .eslint.json
+        - "to check syntax and find problems"
+        - "common.js"
+        - "none" to frameworks
+        - "no" Typscript
+        - "Node"
+        - "JSON"
+4. add scripts inside package.json:
+    - "start": "node index.js"
+    - "server": "nodemon index.js"
+    - "migrateup": "knex migrate:up",
+    - "migratedown": "knex migrate:down",
+    - "migratelatest": "knex migrate:latest",
+    - "migraterollback": "knex migrate:rollback"
+5. add index.js file. flush it out.
+6. add "api" folder:
+    - create server.js file. flush it out.
+    - create folder for each router used
+        - create respective router and model files
+7. add "data" folder:
+    - create dbConfig.js file. flush it out.
+8. create knexfile.js using scaffold command (add at top-level project directory):
+    - npx knex init
+    - flush out with your config settings (migrations and seeds directories, location of db file (connection), etc)
+9. check that server can run. 
+10. create migration file and folder using scaffold command (creation location defined in knexfile.js):
+    - npx knex migrate:make <table_name> // (e.g. cars_table where db3 is named car-dealer)
+    - flush out.
+11. create seed file using scaffolding command:
+    - npx knex seed:make <01-helpful_name> // (filenames dont have timestamps so increment so they load in order.)
+12. add .db3 file to gitignore.
