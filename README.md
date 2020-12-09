@@ -80,4 +80,6 @@ Follow these steps for completing your project.
 10. create migration file and folder using scaffold command (creation location defined in knexfile.js):
     - npx knex migrate:make <table_name> // (e.g. cars_table where db3 is named car-dealer)
     - flush out.
-11. add .db3 file to gitignore.
+11. create seed file using scaffolding command:
+    - npx knex seed:make <01-helpful_name> // (filenames dont have timestamps so increment so they load in order.)
+12. add .db3 file to gitignore.
