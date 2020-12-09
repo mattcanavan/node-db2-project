@@ -1,19 +1,29 @@
 exports.up = function(knex) {
     return knex.schema.createTable('car-dealer', table => {
+        
         // id: primary key, unique, not null, integers that auto-increment
         table.increments();
 
+        //vin: not null, unique 
+        table.text('VIN', 128).unique().notNullable();
+
         //make: not null
-        table.text('make', 128).notNullable();
+        table.text('Make', 128).notNullable();
 
         //model: not null
+        table.text('Model', 128).notNullable();
 
-        //vin: unique, not null
-        // table.text('vin', 128).unique().notNullable();
+        //mileage: not null
+        table.decimal('Mileage', 128).notNullable();
 
-        //transmissionType: can be null
+        //Transmission_Type: can be null
+        table.text('Transmission_Type', 128);
 
-        //titleStatus: can be null
+        //Title_Status: can be null
+        table.text('Title_Status', 128);
+
+        //extra
+        table.timestamps(true, true);
     });
   };
   
